@@ -20,7 +20,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 BOARD_VENDOR_SEPOLICY_DIRS += \
 	$(DEVICE_PATH)/sepolicy/vendor \
 	$(DEVICE_PATH)/sepolicy/dynamic
-	 
+
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 	$(DEVICE_PATH)/sepolicy/dynamic
 

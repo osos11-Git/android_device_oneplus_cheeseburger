@@ -30,7 +30,9 @@ PRODUCT_SYSTEM_NAME := OnePlus5
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=OnePlus5 \
-    TARGET_PRODUCT=OnePlus5
+    TARGET_PRODUCT=OnePlus5 \
+    RISING_CHIPSET="Snapdragon 835" \
+    RISING_MAINTAINER="osos11"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="OnePlus5-user 10 QKQ1.191014.012 2010292059 release-keys"
@@ -38,3 +40,22 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := OnePlus/OnePlus5/OnePlus5:10/QKQ1.191014.012/2010292059:user/release-keys
 
 TARGET_VENDOR := oneplus
+
+# Ship with Aperture Camera
+PRODUCT_NO_CAMERA := true
+# Support call recording on Google Dialer
+TARGET_SUPPORTS_CALL_RECORDING := true
+# Ship with Blur
+TARGET_ENABLE_BLUR := true
+# Ship with Gapps
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_ENABLE_PIXEL_FEATURES := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+RISING_PACKAGE_TYPE := "PIXEL"
+PRODUCT_PACKAGES += \
+   MarkupGoogle \
+   LatinIMEGooglePrebuilt \
+   PrebuiltDeskClockGoogle \
+   CalculatorGooglePrebuilt \
+   CalendarGooglePrebuilt

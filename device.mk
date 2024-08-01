@@ -45,3 +45,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit from oneplus msm8998-common
 $(call inherit-product, device/oneplus/msm8998-common/common.mk)
+
+# Sign builds
+-include vendor/lineage-priv/keys/keys.mk
