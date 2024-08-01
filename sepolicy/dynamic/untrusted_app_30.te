@@ -1,0 +1,21 @@
+# Allow untrusted_app_30 to perform various operations on sysfs files related to can_socket and can_socket devices
+auditallow untrusted_app_30 sysfs_net:dir { read open search };
+auditallow untrusted_app_30 sysfs_net:file { read open getattr };
+auditallow untrusted_app_30 sysfs:file { read open getattr };
+
+# Allow untrusted_app_30 to perform all operations on can_socket objects
+auditallow untrusted_app_30 untrusted_app_30:can_socket create_stream_socket_perms;
+
+# Allow untrusted_app_30 to perform various operations on netlink_route_socket objects
+auditallow untrusted_app_30 untrusted_app_30:netlink_route_socket { bind nlmsg_write };
+
+# Allow untrusted_app_30 to perform various operations on sysfs files related to can_socket and can_socket devices
+allow untrusted_app_30 sysfs_net:dir { read open search };
+allow untrusted_app_30 sysfs_net:file { read open getattr };
+allow untrusted_app_30 sysfs:file { read open getattr };
+
+# Allow untrusted_app_30 to perform all operations on can_socket objects
+allow untrusted_app_30 untrusted_app_30:can_socket create_stream_socket_perms;
+
+# Allow untrusted_app_30 to perform various operations on netlink_route_socket objects
+allow untrusted_app_30 untrusted_app_30:netlink_route_socket { bind nlmsg_write };
