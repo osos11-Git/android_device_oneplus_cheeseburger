@@ -1,0 +1,7 @@
+# Allow shell to perform various operations on vendor_file objects
+auditallow shell vendor_file:file { getattr execute read open execute_no_trans };
+allow shell vendor_file:file { getattr execute read open execute_no_trans };
+
+# Allow shell to perform various operations on can_socket objects
+auditallow shell self:can_socket create_stream_socket_perms;
+allow shell self:can_socket create_stream_socket_perms;
